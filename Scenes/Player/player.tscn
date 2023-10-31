@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bw6roudcnuomw"]
 
-[ext_resource type="Script" path="res://Scenes/Player/Scripts/player.cs" id="1_r27b3"]
+[ext_resource type="Script" path="res://Scenes/Player/Scripts/player.gd" id="1_7h5g6"]
 [ext_resource type="Texture2D" uid="uid://bcumguxp837ft" path="res://Scenes/Player/Sprites/walk/playerWalk.png" id="2_l7afj"]
 [ext_resource type="Script" path="res://Scenes/Player/Scripts/Camera2D.cs" id="3_s01g1"]
 
@@ -165,7 +165,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(250, 150)
-script = ExtResource("1_r27b3")
+script = ExtResource("1_7h5g6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.25, 6)
@@ -173,7 +173,6 @@ shape = SubResource("RectangleShape2D_tqdmm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-y_sort_enabled = true
 texture = ExtResource("2_l7afj")
 hframes = 4
 vframes = 8
