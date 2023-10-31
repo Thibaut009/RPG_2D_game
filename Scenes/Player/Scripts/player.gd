@@ -47,3 +47,4 @@ func get_animation_direction() -> String:
 	else:
 		stop_direction = 0
 		return "default"
+		
