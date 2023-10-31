@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvyc7r5k5eoma"
-path="res://.godot/imported/monster_move.png-bc5f84bcb0cbe0f95794ed90e5b9f850.ctex"
+path="res://.godot/imported/boss_move.png-5969d4c9abe61a3a601fa0cb8b309dc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Monster/Sprites/monster_move.png"
-dest_files=["res://.godot/imported/monster_move.png-bc5f84bcb0cbe0f95794ed90e5b9f850.ctex"]
+source_file="res://Scenes/Monster/Sprites/boss_move.png"
+dest_files=["res://.godot/imported/boss_move.png-5969d4c9abe61a3a601fa0cb8b309dc9.ctex"]
 
 [params]
 

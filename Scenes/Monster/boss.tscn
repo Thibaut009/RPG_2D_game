@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://nf2mb7h5rh1r"]
+[gd_scene load_steps=15 format=3 uid="uid://psoquv5lrpj"]
 
-[ext_resource type="Script" path="res://Scenes/Monster/Scripts/monster.gd" id="1_7eota"]
-[ext_resource type="Texture2D" uid="uid://bvyc7r5k5eoma" path="res://Scenes/Monster/Sprites/monster_move.png" id="1_kx4jo"]
+[ext_resource type="Script" path="res://Scenes/Monster/Scripts/boss.gd" id="1_qrt3q"]
+[ext_resource type="Texture2D" uid="uid://bvyc7r5k5eoma" path="res://Scenes/Monster/Sprites/boss_move.png" id="2_pwgan"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhjlp"]
 size = Vector2(41, 15.25)
@@ -177,9 +177,9 @@ _data = {
 "walk_up": SubResource("Animation_urwny")
 }
 
-[node name="Monster" type="CharacterBody2D"]
+[node name="Boss" type="CharacterBody2D"]
 position = Vector2(536, 368)
-script = ExtResource("1_7eota")
+script = ExtResource("1_qrt3q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 17.625)
@@ -187,11 +187,11 @@ shape = SubResource("RectangleShape2D_rhjlp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-texture = ExtResource("1_kx4jo")
+texture = ExtResource("2_pwgan")
 hframes = 9
 vframes = 6
 
-[node name="AnimationMonster" type="AnimationPlayer" parent="."]
+[node name="AnimationBoss" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_24ut7")
 }

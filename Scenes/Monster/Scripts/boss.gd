@@ -11,7 +11,7 @@ var is_moving : bool = false
 @export var player : Node2D
 
 func _ready():
-	animations = $AnimationMonster
+	animations = $AnimationBoss
 
 func _process(_delta):
 	if player and global_position.distance_to(player.global_position) < follow_range:

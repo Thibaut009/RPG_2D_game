@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0t3t8tb3e3ud"]
 
 [ext_resource type="PackedScene" uid="uid://bw6roudcnuomw" path="res://Scenes/Player/player.tscn" id="1_bmmb6"]
-[ext_resource type="PackedScene" uid="uid://nf2mb7h5rh1r" path="res://Scenes/Monster/monster.tscn" id="2_rdwd1"]
+[ext_resource type="PackedScene" uid="uid://psoquv5lrpj" path="res://Scenes/Monster/boss.tscn" id="2_rdwd1"]
 [ext_resource type="PackedScene" uid="uid://b47tei5rgn6qt" path="res://Scenes/Map/map.tscn" id="2_vxt0i"]
 
 [node name="World" type="Node2D"]
@@ -10,7 +10,7 @@
 z_index = 1
 position = Vector2(27, 131)
 
-[node name="Monster" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_rdwd1")]
+[node name="Boss" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_rdwd1")]
 position = Vector2(157, 117)
 player = NodePath("../Player")
 
