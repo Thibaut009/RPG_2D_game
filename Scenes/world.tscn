@@ -8,9 +8,10 @@
 
 [node name="Player" parent="." instance=ExtResource("1_bmmb6")]
 z_index = 1
-position = Vector2(27, 131)
+position = Vector2(-155, 9)
 
 [node name="Boss" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_rdwd1")]
+z_index = 1
 position = Vector2(157, 117)
 player = NodePath("../Player")
 

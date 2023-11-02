@@ -1,12 +1,17 @@
 extends CharacterBody2D
 
 @export var speed = 100
-var animations : AnimationPlayer
+@export var health : int = 100
 var stop_direction : int
 var is_moving : bool = false
+var health_bar : ProgressBar
+var animations : AnimationPlayer
 
 func _ready():
 	animations = $AnimationPlayer
+	health_bar = $ProgressBar
+
+	health_bar.value = health
 
 func get_input():
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down").normalized()
@@ -46,5 +51,10 @@ func get_animation_direction() -> String:
 		return "down"
 	else:
 		stop_direction = 0
-		return "default"
-		
+		return "down"
+
+# Fonction pour réduire la vie du joueur
+func take_damage(amount: int):
+	health -= amount
+	health_bar.value = health
+	# Ajoutez ici la logique de vérification de la mort du joueur, si nécessaire

@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
-# Monster
 @export var speed = 50
 @export var follow_range = 100
-var animations : AnimationPlayer
+@export var damage_interval : float = 1.0  # Interval de temps en secondes
+@export var damage_amount : int = 10
+var damage_timer : float = 0.0
 var stop_direction : int
 var is_moving : bool = false
+var animations : AnimationPlayer
 
 # Player
 @export var player : Node2D
@@ -16,6 +18,14 @@ func _ready():
 func _process(_delta):
 	if player and global_position.distance_to(player.global_position) < follow_range:
 		move_towards_player()
+
+		# Vérifier si le joueur est à une distance de 10 du monstre
+		if global_position.distance_to(player.global_position) < 60:
+			# Gérer les dégâts par seconde
+			damage_timer += _delta
+			if damage_timer >= damage_interval:
+				player.take_damage(damage_amount)  # Infliger des dégâts au joueur
+				damage_timer = 0.0  # Réinitialiser le timer
 	else:
 		velocity = Vector2.ZERO  # Arrêter le mouvement
 

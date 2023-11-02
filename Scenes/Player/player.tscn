@@ -185,3 +185,11 @@ libraries = {
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
 script = ExtResource("3_s01g1")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = 9
+offset_left = -172.0
+offset_top = -91.0
+offset_right = -9.0
+offset_bottom = -64.0
+scale = Vector2(0.3, 0.3)
